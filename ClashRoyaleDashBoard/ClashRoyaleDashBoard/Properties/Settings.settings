@@ -1,7 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ClashRoyaleDashBoard.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TOKEN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjdkZjJlOGM4LWIxYzEtNDdiZi1iNGI0LWI5MTY4Y2JiYjI5YyIsImlhdCI6MTUzNDcxNTIxNCwic3ViIjoiZGV2ZWxvcGVyL2NlMDg1ODZiLTQ3NDItNjUyYy1iODYzLWFlZTE5N2QwMTVhZCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxODkuMjM3LjIzMS4xMTAiXSwidHlwZSI6ImNsaWVudCJ9XX0.CdUtL3gdG56QES24ZIc7XqKpYGOZGQNlPm7HeZu8 - AlQoFf3W98yAS_mlXrwagISK946L6GN179U20UO7tc0-g</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

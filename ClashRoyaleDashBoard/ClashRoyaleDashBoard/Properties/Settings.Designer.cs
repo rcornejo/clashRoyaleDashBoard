@@ -8,22 +8,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClashRoyaleDashBoard.Properties
-{
-
-
+namespace ClashRoyaleDashBoard.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjdkZjJlOGM4LWIxYzEtNDdiZi1iNGI0LWI5MTY4Y2JiYjI5YyIsImlhdCI6MTUzNDcxNTIxNCwic3ViIjoiZGV2ZWxvcGVyL2NlMDg1ODZiLTQ3NDItNjUyYy1iODYzLWFlZTE5N2QwMTVhZCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxODkuMjM3LjIzMS4xMTAiXSwidHlwZSI6ImNsaWVudCJ9XX0.CdUtL3gdG56QES24ZIc7XqKpYGOZGQNlPm7HeZu8 - AlQoFf3W98yAS_mlXrwagISK946L6GN179U20UO7tc0-g")]
+        public string TOKEN {
+            get {
+                return ((string)(this["TOKEN"]));
+            }
+            set {
+                this["TOKEN"] = value;
             }
         }
     }
