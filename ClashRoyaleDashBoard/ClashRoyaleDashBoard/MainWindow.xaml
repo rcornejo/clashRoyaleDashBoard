@@ -5,9 +5,124 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClashRoyaleDashBoard"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="203,122,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        Title="MainWindow" Height="690" Width="1024" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen">
+    <DockPanel  LastChildFill="True">
+        <WrapPanel DockPanel.Dock="Top">
+            <GroupBox x:Name="gbCandidate1" Header="GroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Height="115" Margin="5,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblDonations1" Content="Donaciones" FontWeight="Bold" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="lblWars1" Content="Guerras" FontWeight="Bold" Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="lblAtacksUsed1" Content="Ataques no&#xA;usados" FontWeight="Bold" Grid.Row="2" Grid.Column="0"/>
+                    <Label x:Name="lblDonationsValue1" Content="0" Grid.Row="0" Grid.Column="1" />
+                    <Label x:Name="lblWarsValue1" Content="0" Grid.Row="1" Grid.Column="1"/>
+                    <Label x:Name="lblAtacksNotUsed1" Content="0" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="gbCandidate2" Header="GroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Height="115" Margin="5,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblDonations2" Content="Donaciones" FontWeight="Bold" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="lblWars2" Content="Guerras" FontWeight="Bold" Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="lblAtacksUsed2" Content="Ataques no&#xA;usados" FontWeight="Bold" Grid.Row="2" Grid.Column="0"/>
+                    <Label x:Name="lblDonationsValue2" Content="0" Grid.Row="0" Grid.Column="1" />
+                    <Label x:Name="lblWarsValue2" Content="0" Grid.Row="1" Grid.Column="1"/>
+                    <Label x:Name="lblAtacksNotUsed2" Content="0" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="gbCandidate3" Header="GroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Height="115" Margin="5,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblDonations3" Content="Donaciones" FontWeight="Bold" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="lblWars3" Content="Guerras" FontWeight="Bold" Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="lblAtacksUsed3" Content="Ataques no&#xA;usados" FontWeight="Bold" Grid.Row="2" Grid.Column="0"/>
+                    <Label x:Name="lblDonationsValue3" Content="0" Grid.Row="0" Grid.Column="1" />
+                    <Label x:Name="lblWarsValue3" Content="0" Grid.Row="1" Grid.Column="1"/>
+                    <Label x:Name="lblAtacksNotUsed3" Content="0" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="gbCandidate4" Header="GroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Height="115" Margin="5,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblDonations4" Content="Donaciones" FontWeight="Bold" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="lblWars4" Content="Guerras" FontWeight="Bold" Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="lblAtacksUsed4" Content="Ataques no&#xA;usados" FontWeight="Bold" Grid.Row="2" Grid.Column="0"/>
+                    <Label x:Name="lblDonationsValue4" Content="0" Grid.Row="0" Grid.Column="1" />
+                    <Label x:Name="lblWarsValue4" Content="0" Grid.Row="1" Grid.Column="1"/>
+                    <Label x:Name="lblAtacksNotUsed4" Content="0" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="gbCandidate5" Header="GroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Height="115" Margin="5,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblDonations5" Content="Donaciones" FontWeight="Bold" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="lblWars5" Content="Guerras" FontWeight="Bold" Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="lblAtacksUsed5" Content="Ataques no&#xA;usados" FontWeight="Bold" Grid.Row="2" Grid.Column="0"/>
+                    <Label x:Name="lblDonationsValue5" Content="0" Grid.Row="0" Grid.Column="1" />
+                    <Label x:Name="lblWarsValue5" Content="0" Grid.Row="1" Grid.Column="1"/>
+                    <Label x:Name="lblAtacksNotUsed5" Content="0" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+            </GroupBox>
+            <Button x:Name="button1" Content="Button" VerticalAlignment="Top" Click="button_Click" Height="104" Width="104" Margin="5,10,0,0"/>
 
-    </Grid>
+        </WrapPanel>
+        <ScrollViewer DockPanel.Dock="Left" Width="300" MaxWidth="341" MinWidth="100" MaxHeight="524" Height="524">
+            <StackPanel x:Name="panelMembers" >
+                <Label x:Name="lblMembersTitle" Content="Miembros" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                <Button Content="First Item" BorderThickness="1" Margin="0,2" />
+                <Button Content="Second Item" />
+                <Button Content="Third Item" />
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel>
+            <GroupBox x:Name="gbUserStats" Header="Estadísticas del Jugador" HorizontalAlignment="Left" VerticalAlignment="Top"
+                  Height="262" Width="716" MaxWidth="716" MinWidth="241" MinHeight="120" MaxHeight="262" Margin="5">
+            </GroupBox>
+            <GroupBox x:Name="gbUserWarStats" Header="Estadísticas del Jugador en guerra" HorizontalAlignment="Left" VerticalAlignment="Top"
+                  Height="262" Width="716" MaxWidth="716" MinWidth="241" MinHeight="120" MaxHeight="324" Margin="5">
+            </GroupBox>
+        </StackPanel>
+
+
+    </DockPanel>
 </Window>
