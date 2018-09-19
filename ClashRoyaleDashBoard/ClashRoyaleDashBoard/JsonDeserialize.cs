@@ -12,7 +12,13 @@ namespace ClashRoyaleDashBoard
         public Paging paging { get; set; }
 
     }
-    
+    class JsonDeserializeClashClanMembers
+    {
+        public List<ClashClanMember> items { get; set; }
+        public Paging paging { get; set; }
+
+    }
+
     public class Paging
     {
         public Cursors cursors { get; set; }

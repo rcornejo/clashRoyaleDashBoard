@@ -19,5 +19,10 @@ namespace ClashRoyaleDashBoard
         public int Donations { get; set; }
         public int DonationsReceived { get; set; }
         public int ClanChestPoints { get; set; }
+        public float DonationsRatio { get; set; }
+        public int SkippedWars { get; set; }
+        public int ParticipatedWars { get; set; }
+        public int WastedWarAttacks { get; set; }
+        public float WarAtackRatio { get; set; }
     }
 }

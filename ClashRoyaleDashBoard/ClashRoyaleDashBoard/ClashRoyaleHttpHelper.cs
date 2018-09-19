@@ -21,9 +21,10 @@ namespace ClashRoyaleDashBoard
         static string clanTag = "%232Y2LV9G";
 
         private static void AddHeaders() {
+            string token = FileReader.readToken();
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
-            client.DefaultRequestHeaders.Add("authorization", "Bearer " + Properties.Settings.Default.TOKEN);
+            client.DefaultRequestHeaders.Add("authorization", "Bearer " + token);
         }
         /***
             Returns a list of the wars with ClashWarPartcipants and standings
@@ -41,6 +42,7 @@ namespace ClashRoyaleDashBoard
                 warLog = Newtonsoft.Json.JsonConvert.DeserializeObject<JsonDeserialize>(responseString);
                 
             }
+                            
             return warLog.items;
             //return responseString;
         }
@@ -49,16 +51,15 @@ namespace ClashRoyaleDashBoard
             List<ClashClanMember> clanMembersList = new List<ClashClanMember>();
             string path = String.Format("{0}{1}/{2}{3}",
                 apiPath, clansPath, clanTag, membersPath);
-            
+            JsonDeserializeClashClanMembers clanMembers = null;
             AddHeaders();
             HttpResponseMessage response = await client.GetAsync(path);
             {
                 responseString = await response.Content.ReadAsStringAsync();
-                dynamic clanMembers = Newtonsoft.Json.JsonConvert.DeserializeObject<JsonDeserialize>(responseString);
+                clanMembers = Newtonsoft.Json.JsonConvert.DeserializeObject<JsonDeserializeClashClanMembers>(responseString);
 
             }
-            return clanMembersList;
-
+            return clanMembers.items;
         }
         public static async Task<string> GetClanMembersAsyncTemp()
         {

@@ -33,9 +33,7 @@ namespace ClashRoyaleDashBoard
         public Achivement[] Achivements { get; set; }
         public ClashCard[] Cards { get; set; }
         public ClashCurrentFavouriteCard CurrentFavouriteCard { get; set; }
-        public float DonationsRatio { get; set; }
-        public float WarParticipationRatio { get; set; }
-        public float WarAtackRatio { get; set; }
+        
 
     }
 }

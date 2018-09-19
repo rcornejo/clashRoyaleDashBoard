@@ -69,10 +69,15 @@
     <Compile Include="ClashWarClan.cs" />
     <Compile Include="ClashWarParticipant.cs" />
     <Compile Include="ClashWarStandings.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="JsonDeserialize.cs" />
     <Compile Include="JsonHelper.cs" />
     <Compile Include="ClashPlayer.cs" />
     <Compile Include="Season.cs" />
+    <Page Include="Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -116,6 +121,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="token.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\clan-wars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\tournament.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\level-big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\magic_wand.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
