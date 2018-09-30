@@ -24,7 +24,7 @@ namespace ClashRoyaleDashBoard
             string token = FileReader.readToken();
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
-            client.DefaultRequestHeaders.Add("authorization", "Bearer " + token);
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
         }
         /***
             Returns a list of the wars with ClashWarPartcipants and standings
@@ -54,7 +54,7 @@ namespace ClashRoyaleDashBoard
             JsonDeserializeClashClanMembers clanMembers = null;
             AddHeaders();
             HttpResponseMessage response = await client.GetAsync(path);
-            {
+            if(response.IsSuccessStatusCode){
                 responseString = await response.Content.ReadAsStringAsync();
                 clanMembers = Newtonsoft.Json.JsonConvert.DeserializeObject<JsonDeserializeClashClanMembers>(responseString);
 

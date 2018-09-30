@@ -33,40 +33,48 @@ namespace ClashRoyaleDashBoard
         private async void fillMembersPanel()
         {
             clanMembers = await loadClashClanMembers();
-            warLogs = await ClashRoyaleHttpHelper.GetWarLog();
-            Thickness margins;
-            if (clanMembers == null)//TODO:add error message
-                return;
-
-            List<ClashClanMember> clanMembersOrdered = clanMembers.OrderByDescending(o => o.DonationsRatio).ToList();
-
-            foreach (ClashClanMember member in clanMembersOrdered)
+            if (clanMembers == null)
             {
-                Button newButton = new Button();
-                newButton.Content = member.Name;
+                MessageBox.Show("Error al cargar los miembros", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
-                margins = newButton.Margin;
-                margins.Top = 2;
-                margins.Bottom = 2;
+            }
+            else {
+                warLogs = await ClashRoyaleHttpHelper.GetWarLog();
+                Thickness margins;
+                if (clanMembers == null)//TODO:add error message
+                    return;
 
-                newButton.Margin = margins;
-                newButton.Tag = member.Tag;
-                newButton.Click += btnGetUserStats;
-                
+                List<ClashClanMember> clanMembersOrdered = clanMembers.OrderByDescending(o => o.DonationsRatio).ToList();
 
-                panelMembers.Children.Add(newButton);
+                foreach (ClashClanMember member in clanMembersOrdered)
+                {
+                    Button newButton = new Button();
+                    newButton.Content = member.Name;
+
+                    margins = newButton.Margin;
+                    margins.Top = 2;
+                    margins.Bottom = 2;
+
+                    newButton.Margin = margins;
+                    newButton.Tag = member.Tag;
+                    newButton.Click += btnGetUserStats;
+
+
+                    panelMembers.Children.Add(newButton);
+                }
             }
         }
-        private async void calculateWarRatio()
+        private async Task<List<ClashClanMember>> calculateWarRatio()
         {
             if (warLogs == null)
-                return;
+                return null;
             if (clanMembers == null)
-                return;
+                return null;
 
             //ClashClanMember member =null;
-            await Task.Run(() =>
-            {
+            List<ClashClanMember> candidates = null;
+            //await Task.Run(() =>
+            //{
                 foreach (ClashClanMember member in clanMembers)
                 {
 
@@ -92,7 +100,10 @@ namespace ClashRoyaleDashBoard
                     member.WarAtackRatio = (participatedWars==0)? 0 : (participatedWars - wastedAttacks) / participatedWars;
                     member.ParticipatedWars = participatedWars;
                 }
-            });
+                candidates = clanMembers.OrderByDescending(m => m.WastedWarAttacks).ThenBy(c => c.WarAtackRatio).ThenBy(c=>c.DonationsRatio).Take(3).ToList();
+            return candidates;
+            //});
+            
         }
         private void btnGetUserStats(object sender, RoutedEventArgs e)
         {            
@@ -173,10 +184,16 @@ namespace ClashRoyaleDashBoard
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            await Task.Run(() =>
+            //await Task.Run(() =>
+            //{
+            List<ClashClanMember> candidates = await calculateWarRatio();
+            if (candidates != null && candidates.Count == 3)
             {
-                calculateWarRatio();
-            });
+                lblCandidate1.Content = candidates.ElementAt(0).Name;
+                lblCandidate2.Content = candidates.ElementAt(1).Name;
+                lblCandidate3.Content = candidates.ElementAt(2).Name;
+            }
+            //});
 
         }
     }
